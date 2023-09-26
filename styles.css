@@ -1,0 +1,305 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #787ed8;
+    padding-top: 70px;
+}
+
+/* Estilização do Header */
+header {
+    background-color: #342e37;
+    color: #fff;
+    padding: 0.4rem; /* Reduzindo o padding do cabeçalho */
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Garante que o header esteja acima de outros elementos */
+}
+
+/* Ícone do Menu */
+.menu-icon {
+    display: none; /* Inicialmente escondido em telas maiores */
+    cursor: pointer;
+}
+
+/* Barras do Ícone do Menu */
+.bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px auto;
+    transition: 0.4s;
+}
+
+/* Estilização do Menu de Navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    padding: 0 0.5rem; /* Ajuste o valor do padding conforme desejado */
+
+    position: relative;
+    left: -50px; /* Ajuste o valor conforme desejado para mover o texto para a esquerda */
+}
+
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold; /* Adicionei um peso de fonte para maior destaque */
+}
+
+/* Adaptação para Telas Menores */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: flex; /* Mostra o ícone em telas menores */
+    }
+
+    nav {
+        display: none; /* Inicialmente esconde o menu em telas menores */
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Ajusta a posição do menu dropdown */
+        left: 0;
+    }
+
+    nav.active {
+        display: flex; /* Mostra o menu quando está ativo (clicado) */
+    }
+    
+    nav li {
+        margin: 1rem 0;
+    }
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #787ed8; /* Cor da barrinha */
+    transition: width 0.3s; /* Adicionando transição suave de largura */
+}
+
+nav a:hover::after {
+    width: 100%; /* Aumentando a largura da barrinha ao passar o mouse */
+}
+
+
+
+section {
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+section#sobre-mim {
+    background-color: #787ed8;
+        padding-top: 2rem; /* Ajuste o valor conforme necessário */
+}
+
+
+
+
+
+
+footer {
+    background-color: #342e37;
+    color: #fff;
+    text-align: center;
+    padding: 0.3rem; /* Reduzindo o padding do cabeçalho */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Adicionando estilo para tornar o site responsivo */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    nav ul a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    nav ul a:hover {
+        color: #aaa;
+    }
+}
+a {
+    text-decoration: none;
+}
+
+/* styles.css */
+
+.contato-section {
+    margin-bottom: 50px;
+}
+
+.contato-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contato-list li {
+    margin-bottom: 10px;
+}
+
+.contato-button {
+    padding: 8px 16px;
+    background-color:  #342E37;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.contato-button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contato-button:hover {
+    background-color: #5a4a63;
+}
+
+.projeto-01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.projeto-01 img {
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    
+}
+
+.projeto-02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+}
+
+.projeto-02 img {
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.projeto-03 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+}
+
+.projeto-03 img {
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.texto-projeto{
+    text-align: center;
+    color: #fff;
+}
+.link-animated {
+    color: #ffffff; /* Cor da escrita */
+}
+
+.link-animated::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #787ed8; /* Cor da barrinha */
+    transition: width 0.3s; /* Adicionando transição suave de largura */
+    
+}
+
+.link-animated:hover::after {
+    width: 100%; /* Aumentando a largura da barrinha ao passar o mouse */
+}
+
+.projeto {
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+
+  
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  ul {
+ 
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
